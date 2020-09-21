@@ -291,9 +291,9 @@ void GGPO::_bind_methods() {
     ClassDB::bind_method(D_METHOD("getNetworkStats", "playerHandle"), &GGPO::getNetworkStats);
 
     ADD_SIGNAL(MethodInfo("advance_frame"));
-    ADD_SIGNAL(MethodInfo("load_game_state", PropertyInfo(Variant::POOL_BYTE_ARRAY, "buffer")));
-    ADD_SIGNAL(MethodInfo("log_game_state", PropertyInfo(Variant::STRING, "filename"), PropertyInfo(Variant::POOL_BYTE_ARRAY, "buffer")));
-    ADD_SIGNAL(MethodInfo("save_game_state", PropertyInfo(Variant::POOL_BYTE_ARRAY, "buffer")));
+    ADD_SIGNAL(MethodInfo("load_game_state", PropertyInfo(Variant::PACKED_BYTE_ARRAY, "buffer")));
+    ADD_SIGNAL(MethodInfo("log_game_state", PropertyInfo(Variant::STRING, "filename"), PropertyInfo(Variant::PACKED_BYTE_ARRAY, "buffer")));
+    ADD_SIGNAL(MethodInfo("save_game_state", PropertyInfo(Variant::PACKED_BYTE_ARRAY, "buffer")));
     ADD_SIGNAL(MethodInfo("event_connected_to_peer", PropertyInfo(Variant::INT, "player")));
     ADD_SIGNAL(MethodInfo("event_synchronizing_with_peer", PropertyInfo(Variant::INT, "player"), PropertyInfo(Variant::INT, "count"), PropertyInfo(Variant::INT, "total")));
     ADD_SIGNAL(MethodInfo("event_synchronized_with_peer", PropertyInfo(Variant::INT, "player")));
